@@ -2,7 +2,7 @@
   "name": "abaper",
   "displayName": "ABAPer",
   "description": "AI-powered ABAP development assistant powered by BlueFunda",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "publisher": "bluefunda",
   "engines": {
     "vscode": "^1.85.0"
