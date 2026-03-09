@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    uses: bluefunda/release-foundry/.github/workflows/release-please.yml@main
+    permissions:
+      contents: write
+      pull-requests: write
+    with:
+      release-type: node
+    secrets:
+      GH_PAT: ${{ secrets.GH_PAT }}
+
+  publish:
+    name: Publish to VS Code Marketplace
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run compile
+
+      - name: Publish extension
+        run: npx @vscode/vsce publish -p ${{ secrets.VSCE_PAT }}
