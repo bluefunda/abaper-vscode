@@ -4,16 +4,23 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
-    uses: bluefunda/release-foundry/.github/workflows/release-please.yml@main
-    permissions:
-      contents: write
-      pull-requests: write
-    with:
-      release-type: node
-    secrets:
-      GH_PAT: ${{ secrets.GH_PAT }}
+    name: Release Please
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
 
   publish:
     name: Publish to VS Code Marketplace
