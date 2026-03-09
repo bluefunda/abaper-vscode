@@ -1,0 +1,90 @@
+{
+  "name": "abaper",
+  "displayName": "ABAPer",
+  "description": "AI-powered ABAP development assistant powered by BlueFunda",
+  "version": "0.3.0",
+  "publisher": "bluefunda",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "ABAP",
+    "SAP",
+    "AI",
+    "BlueFunda",
+    "MCP"
+  ],
+  "activationEvents": [
+    "onLanguage:abap",
+    "onCommand:abaper.login",
+    "onCommand:abaper.openChat"
+  ],
+  "icon": "images/abaper-icon.png",
+  "main": "./out/extension.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bluefunda/abaper-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/bluefunda/abaper-vscode/issues"
+  },
+  "homepage": "https://github.com/bluefunda/abaper-vscode#readme",
+  "contributes": {
+    "commands": [
+      {
+        "command": "abaper.openChat",
+        "title": "ABAPer: Open Chat",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "abaper.login",
+        "title": "ABAPer: Login"
+      },
+      {
+        "command": "abaper.logout",
+        "title": "ABAPer: Logout"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "abaper.openChat",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      }
+    ],
+    "configuration": {
+      "title": "ABAPer",
+      "properties": {
+        "abaper.apiBaseUrl": {
+          "type": "string",
+          "default": "https://api.bluefunda.com",
+          "description": "Base URL for the BlueFunda API"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "marked": "^17.0.4"
+  }
+}
