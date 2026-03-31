@@ -76,9 +76,10 @@ export class AuthManager {
 
     const deviceData = (await deviceResp.json()) as DeviceAuthResponse;
 
-    // Step 2: Show user code and open browser
-    const url = deviceData.verification_uri_complete || deviceData.verification_uri;
-    await vscode.env.openExternal(vscode.Uri.parse(url));
+    // Step 2: Show user code and open browser via bluefunda.com/login
+    const verificationUrl = deviceData.verification_uri_complete || deviceData.verification_uri;
+    const loginUrl = `https://bluefunda.com/login?redirect_uri=${encodeURIComponent(verificationUrl)}&utm_source=vscode-extension&utm_medium=command&utm_campaign=login`;
+    await vscode.env.openExternal(vscode.Uri.parse(loginUrl));
 
     vscode.window.showInformationMessage(
       `ABAPer: Enter code ${deviceData.user_code} in the browser to log in.`

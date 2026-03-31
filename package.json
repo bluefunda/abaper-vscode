@@ -21,6 +21,7 @@
   "activationEvents": [
     "onLanguage:abap",
     "onCommand:abaper.login",
+    "onCommand:abaper.signup",
     "onCommand:abaper.openChat"
   ],
   "icon": "images/abaper-icon.png",
@@ -48,6 +49,10 @@
       {
         "command": "abaper.logout",
         "title": "ABAPer: Logout"
+      },
+      {
+        "command": "abaper.signup",
+        "title": "ABAPer: Sign Up"
       }
     ],
     "keybindings": [
