@@ -2,6 +2,13 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.0](https://github.com/bluefunda/abaper-vscode/compare/v1.0.0...v1.1.0) (2026-04-02)
+
+
+### Features
+
+* route login through bluefunda.com, add signup command, add telemetry ([#3](https://github.com/bluefunda/abaper-vscode/issues/3)) ([bb87508](https://github.com/bluefunda/abaper-vscode/commit/bb8750858d2102f0e5cd57128decfa07f1464180))
+
 ## 1.0.0 (2026-03-09)
 
 
