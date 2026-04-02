@@ -2,6 +2,13 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.2](https://github.com/bluefunda/abaper-vscode/compare/v1.1.1...v1.1.2) (2026-04-02)
+
+
+### Bug Fixes
+
+* prevent double-encoding of redirect_uri in login URL ([#7](https://github.com/bluefunda/abaper-vscode/issues/7)) ([2c4f147](https://github.com/bluefunda/abaper-vscode/commit/2c4f1479b84ee91b7f384f28846ff056daf5a1f3))
+
 ## [1.1.1](https://github.com/bluefunda/abaper-vscode/compare/v1.1.0...v1.1.1) (2026-04-02)
 
 
