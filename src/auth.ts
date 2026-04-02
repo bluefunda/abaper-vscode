@@ -52,7 +52,7 @@ export class AuthManager {
 
   private getAuthBaseUrl(): string {
     const realm = DEFAULT_REALM;
-    return `https://ai.bluefunda.com/realms/${realm}/protocol/openid-connect`;
+    return `https://auth.bluefunda.com/realms/${realm}/protocol/openid-connect`;
   }
 
   async login(): Promise<void> {
