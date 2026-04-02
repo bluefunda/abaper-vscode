@@ -76,14 +76,12 @@ export class AuthManager {
 
     const deviceData = (await deviceResp.json()) as DeviceAuthResponse;
 
-    // Step 2: Show user code and open browser via bluefunda.com/login
+    // Step 2: Open Keycloak verification URL directly
+    // Note: routing through bluefunda.com/login causes double-encoding of
+    // the redirect_uri query param by vscode.env.openExternal. GA attribution
+    // is handled via telemetry events instead.
     const verificationUrl = deviceData.verification_uri_complete || deviceData.verification_uri;
-    const loginPage = new URL('https://bluefunda.com/login');
-    loginPage.searchParams.set('redirect_uri', verificationUrl);
-    loginPage.searchParams.set('utm_source', 'vscode-extension');
-    loginPage.searchParams.set('utm_medium', 'command');
-    loginPage.searchParams.set('utm_campaign', 'login');
-    await vscode.env.openExternal(vscode.Uri.parse(loginPage.toString(), true));
+    await vscode.env.openExternal(vscode.Uri.parse(verificationUrl, true));
 
     vscode.window.showInformationMessage(
       `ABAPer: Enter code ${deviceData.user_code} in the browser to log in.`
