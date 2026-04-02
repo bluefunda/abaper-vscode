@@ -2,6 +2,14 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.3](https://github.com/bluefunda/abaper-vscode/compare/v1.1.2...v1.1.3) (2026-04-02)
+
+
+### Bug Fixes
+
+* add VS Code launch config for F5 debugging ([#9](https://github.com/bluefunda/abaper-vscode/issues/9)) ([f157350](https://github.com/bluefunda/abaper-vscode/commit/f15735082ce2937ff3ea79aa5bf613295da8fb01))
+* use URL API to build login URL, prevent double-encoding ([#10](https://github.com/bluefunda/abaper-vscode/issues/10)) ([9312b07](https://github.com/bluefunda/abaper-vscode/commit/9312b07123d4213941ac147b472b7b7bca745807))
+
 ## [1.1.2](https://github.com/bluefunda/abaper-vscode/compare/v1.1.1...v1.1.2) (2026-04-02)
 
 
