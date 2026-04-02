@@ -35,6 +35,7 @@ export class TelemetryClient {
         event,
         properties: {
           ...properties,
+          client: 'vscode',
           extension_version: this.extensionVersion,
           vscode_version: vscode.version,
           platform: process.platform,
