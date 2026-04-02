@@ -2,6 +2,13 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.4](https://github.com/bluefunda/abaper-vscode/compare/v1.1.3...v1.1.4) (2026-04-02)
+
+
+### Bug Fixes
+
+* open Keycloak verification URL directly for login ([#12](https://github.com/bluefunda/abaper-vscode/issues/12)) ([eacd09b](https://github.com/bluefunda/abaper-vscode/commit/eacd09bf2a34efd223de78849f5bbf8a4e073557))
+
 ## [1.1.3](https://github.com/bluefunda/abaper-vscode/compare/v1.1.2...v1.1.3) (2026-04-02)
 
 
