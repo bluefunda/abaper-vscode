@@ -2,6 +2,13 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.1](https://github.com/bluefunda/abaper-vscode/compare/v1.1.0...v1.1.1) (2026-04-02)
+
+
+### Bug Fixes
+
+* revert auth host to auth.bluefunda.com ([#5](https://github.com/bluefunda/abaper-vscode/issues/5)) ([ed0719b](https://github.com/bluefunda/abaper-vscode/commit/ed0719bd26357f3168957fcf853601ae3de266f7))
+
 ## [1.1.0](https://github.com/bluefunda/abaper-vscode/compare/v1.0.0...v1.1.0) (2026-04-02)
 
 
