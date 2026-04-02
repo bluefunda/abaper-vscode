@@ -5,7 +5,7 @@ const REFRESH_TOKEN_KEY = 'abaper.refreshToken';
 const TOKEN_EXPIRY_KEY = 'abaper.tokenExpiry';
 
 const CLIENT_ID = 'cai-cli';
-const DEFAULT_REALM = 'trm';
+const DEFAULT_REALM = 'individual';
 
 interface DeviceAuthResponse {
   device_code: string;
@@ -52,7 +52,7 @@ export class AuthManager {
 
   private getAuthBaseUrl(): string {
     const realm = DEFAULT_REALM;
-    return `https://auth.bluefunda.com/realms/${realm}/protocol/openid-connect`;
+    return `https://ai.bluefunda.com/realms/${realm}/protocol/openid-connect`;
   }
 
   async login(): Promise<void> {
