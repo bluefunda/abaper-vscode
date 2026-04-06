@@ -43,7 +43,7 @@ export class TelemetryClient {
         },
       };
 
-      await fetch(`${this.getBaseUrl()}/v1/telemetry`, {
+      await fetch(`${this.getBaseUrl()}/abaper/telemetry`, {
         method: 'POST',
         headers,
         body: JSON.stringify(body),
