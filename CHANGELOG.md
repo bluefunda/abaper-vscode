@@ -2,6 +2,13 @@
 
 All notable changes to the ABAPer VS Code extension will be documented in this file.
 
+## [1.1.5](https://github.com/bluefunda/abaper-vscode/compare/v1.1.4...v1.1.5) (2026-04-06)
+
+
+### Bug Fixes
+
+* use correct gateway path for telemetry endpoint ([#14](https://github.com/bluefunda/abaper-vscode/issues/14)) ([66e8574](https://github.com/bluefunda/abaper-vscode/commit/66e857432cd63f77a344f2ecea888c5a2b0afd09))
+
 ## [1.1.4](https://github.com/bluefunda/abaper-vscode/compare/v1.1.3...v1.1.4) (2026-04-02)
 
 
